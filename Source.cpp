@@ -107,6 +107,9 @@ int Menu()
 	int gridchoice;
 	do {
 		cin >> gridchoice;
+		cin.clear();
+		while (cin.get() != '\n')
+			continue;
 	} while (gridchoice != 1 && gridchoice != 2);
 	system("cls");			// clear the menu
 	return gridchoice;
