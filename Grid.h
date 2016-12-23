@@ -2,9 +2,9 @@
 
 class Grid
 {
-	int ** data;			// a two-dimensional array
+	unsigned long ** data;			// a two-dimensional array
 	int rc;					// number of rows and columns will always be the same
-	int score, highscore;
+	unsigned long score, highscore;
 public:
 	Grid(int);				// makes grid according to user choice
 	void ShowGrid();
@@ -44,10 +44,10 @@ Grid::Grid(int x)
 		fin >> highscore;
 		fin.close();
 	}
-	data = new int*[rc];
+	data = new unsigned long*[rc];
 	for (int i = 0; i < rc; i++)
 	{
-		data[i] = new int[rc];
+		data[i] = new unsigned long[rc];
 	}		// created a two d array to hold the data
 	SetAll(0);		// set every index to zero
 	int counter = 0, y, z;
